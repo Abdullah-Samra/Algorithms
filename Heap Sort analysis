@@ -1,0 +1,24 @@
+1. Write all required algorithms needed to sort a sequence of numbers using Heap-Sort algorithm
+Heap-Sort Algorithm Steps
+Build a Max-Heap: Rearrange the input array into a Max-Heap structure where the largest element is at the root.
+Sorting Process:
+Swap the root element (maximum value) with the last element in the array.
+Reduce the size of the heap by one and call MaxHeapify to restore the Max-Heap property.
+Repeat the process until the heap size becomes one.
+
+
+2. Analyze in detail your written algorithms
+Time Complexity Analysis
+1-Building the Max-Heap:
+
+-The MaxHeapify function is called on n/2 nodes (all non-leaf nodes).
+-Each call to MaxHeapify takes 𝑂(log 𝑛) time due to the height of the heap.
+-Total time complexity for building the heap: 𝑂(𝑛).
+
+2-Sorting Process:
+-Each iteration involves swapping the root with the last element and calling MaxHeapify on the reduced heap.
+-This process repeats 𝑛−1 times, and each call to MaxHeapify takes 𝑂(log𝑛).
+-Total time complexity for sorting: 𝑂(nlogn).
+Best Case: 𝑂(nlogn).
+Worst Case: 𝑂(nlogn).
+Average Case: 𝑂(nlogn).
