@@ -1,0 +1,17 @@
+1. Write all required algorithms needed to find MST using Kruskal’s Algorithm
+ Steps
+Kruskal’s algorithm is a greedy algorithm used to find the Minimum Spanning Tree (MST) of a connected, weighted graph. It works as follows:
+
+1-Sort all edges by their weights in ascending order.
+2-Initialize the MST as an empty set.
+3-Iterate through the sorted edges:
+* Add the edge to the MST if it does not form a cycle.
+* Use Union-Find (Disjoint Set Union) to check and avoid cycles.
+4-Stop when the MST has 𝑉−1 edges (𝑉 = number of vertices).
+
+
+2. Analyze in detail your written algorithms
+Time Complexity
+*Sorting Edges: 𝑂(𝐸 log 𝐸), where 𝐸 = number of edges.
+*Union-Find Operations: Nearly constant time 𝑂(𝛼(𝑉)) per operation, for 𝐸 edges → 𝑂(𝐸𝛼(𝑉)).
+*Total Time Complexity: 𝑂(𝐸 log 𝐸 +𝐸𝛼(𝑉))≈𝑂(𝐸 log 𝐸).
